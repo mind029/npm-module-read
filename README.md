@@ -4,4 +4,4 @@
 
 ## Array
 
-[is-sorted](https://github.com/dcousens/is-sorted) 2018-3-10 
+[is-sorted](https://github.com/mind029/npm-module-read/blob/master/Array/is-sorted/is-sorted.js) 2018-3-10 
