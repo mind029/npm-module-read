@@ -5,12 +5,17 @@
  * Licensed under the MIT license.
  */
 
+ /**
+  * 模块用途：获取数组的第一个元素或前n个元素。
+  */
+
 // 引入is-number模块，用于判断是否为数字 
 var isNumber = require('is-number');
 // 引入数组分割方法
 var slice = require('array-slice');
 
 /**
+ * 获取数组的第一个元素或前n个元素。
  * 暴露api方法 arrayFirst
  * @param {*} arr 传入数组参数
  * @param {*} num 切割个数
@@ -32,7 +37,7 @@ module.exports = function arrayFirst(arr, num) {
   // 调用isNumber()函数判断 参数 num是否为数字，如果是，返回 +num（相当于Number(num)）强制转成数字意思。不是就返回1 
   var first = slice(arr, 0, isNumber(num) ? +num : 1);
 
-  // 当num 等于1 或者不穿的时候，直接返回 传入数组 切割 [1]
+  // 当num 等于1 或者不穿的时候，直接返回 数组第一个元素
   if (+num === 1 || num == null) {
     return first[0];
   }
