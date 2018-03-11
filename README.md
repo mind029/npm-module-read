@@ -5,3 +5,4 @@
 ## Array
 
 [is-sorted](https://github.com/mind029/npm-module-read/blob/master/Array/is-sorted/is-sorted.js) 2018-3-10 
+[array-first](https://github.com/mind029/npm-module-read/blob/master/Array/array-first/index.js)
