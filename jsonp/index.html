@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="./index.js"></script>
+</head>
+
+<body>
+
+  <button type="button" id="myBtn">调用jsonp方法</button>
+
+  <script>
+    var btn = document.querySelector("#myBtn");
+    btn.addEventListener('click', function () {
+      var url = "https://dc.3.cn/category/get";
+      var opts = {
+        // 后台接收参数名
+        param: 'callback',
+        // 超时时间
+        timeout: 5000
+      }
+
+      // 回到函数
+      var handler = function (err, data) {
+        if (err) {
+          throw err
+        }
+        console.log("后台传回来的数据", data);
+      }
+
+      // 调用jsonp，然后把数据创给handler，完成之后在清除掉 全局函数和script
+      var jp = jsonp(url, opts, handler);
+    }, false)
+  </script>
+</body>
+
+</html>
